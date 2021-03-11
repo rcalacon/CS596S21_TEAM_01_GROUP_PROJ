@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public float jumpForce = .01f;
+    bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +17,24 @@ public class CharacterController : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left);
+            rb.AddForce(-transform.right);
         if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right);
+            rb.AddForce(transform.right);
         if (Input.GetKey(KeyCode.W))
-            rb.AddForce(Vector3.forward);
+            rb.AddForce(transform.forward);
         if (Input.GetKey(KeyCode.S))
-            rb.AddForce(Vector3.back);
-        if (Input.GetKeyDown(KeyCode.Space))
+            rb.AddForce(-transform.forward);
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+            isGrounded = true;
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+            isGrounded = false;
     }
 }
