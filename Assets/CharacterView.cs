@@ -65,7 +65,7 @@ public class CharacterView : MonoBehaviour
             transform.rotation = rotation;
             transform.position = position;
 
-            target.transform.rotation = rotation;
+            //target.transform.rotation = rotation;
         }
     }
 
