@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CannonController : MonoBehaviour
 {
-    float aimHeight = -20f;
+    float aimHeight;
+    public GameObject cannonBall;
+    public float forceAmount;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        aimHeight = -20f;
+        forceAmount = 2000f;
     }
 
     // Update is called once per frame
@@ -25,7 +28,19 @@ public class CannonController : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //Ta Daaa
-        transform.rotation = Quaternion.Euler(new Vector3(mouseOnScreen.y * aimHeight, -angle, angle));
+        Vector3 cannonAim = new Vector3(mouseOnScreen.y * aimHeight, -angle, angle);
+        Quaternion cannonRotation = Quaternion.Euler(cannonAim);
+        Vector3 cannonTestAim = mouseOnScreen;
+        cannonTestAim.z = -1;
+        transform.rotation = cannonRotation;
+
+        //Fire Cannon
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            var firedCannonBall = Instantiate(cannonBall, transform.position, Quaternion.identity);
+            firedCannonBall.GetComponent<Rigidbody>().AddForce((ray.direction) * forceAmount);
+        }
     }
 
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
