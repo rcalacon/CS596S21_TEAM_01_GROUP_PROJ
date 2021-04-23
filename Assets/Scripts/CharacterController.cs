@@ -71,7 +71,7 @@ public class CharacterController : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         // Character Landed From Jump
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "Wall")
         {
             isGrounded = true;
         }
