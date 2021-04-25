@@ -538,7 +538,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4742006124959712}
   - component: {fileID: 95761197108965826}
-  - component: {fileID: 5720115558869868242}
+  - component: {fileID: -1297725858908686899}
+  - component: {fileID: -2947763258439598138}
   m_Layer: 0
   m_Name: Condor
   m_TagString: Untagged
@@ -555,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 1866390378080362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4328565854261316}
   - {fileID: 4282137226427460}
@@ -581,7 +582,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5720115558869868242
+--- !u!114 &-1297725858908686899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,3 +597,18 @@ MonoBehaviour:
   Position: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
   Neighbors: []
+  gameManager: {fileID: 9201758395475211798, guid: b9c33b6cca234b14e9d9894f181e5a47,
+    type: 3}
+--- !u!65 &-2947763258439598138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866390378080362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.91, y: 1.56, z: 2.32}
+  m_Center: {x: 0, y: 0.49, z: 0.53}

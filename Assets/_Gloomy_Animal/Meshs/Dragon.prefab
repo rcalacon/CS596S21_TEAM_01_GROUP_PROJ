@@ -485,11 +485,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4037594867893618}
   - component: {fileID: 95119539051081008}
-  - component: {fileID: 9184933805383743297}
-  - component: {fileID: -8717491189922122499}
+  - component: {fileID: -6943071645633952198}
+  - component: {fileID: 8972836658028145852}
   m_Layer: 0
   m_Name: Dragon
-  m_TagString: Target
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,7 +503,7 @@ Transform:
   m_GameObject: {fileID: 1674130526759142}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4406443428980030}
   - {fileID: 4376295807909140}
@@ -529,7 +529,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9184933805383743297
+--- !u!114 &-6943071645633952198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,7 +546,7 @@ MonoBehaviour:
   Neighbors: []
   gameManager: {fileID: 9201758395475211798, guid: b9c33b6cca234b14e9d9894f181e5a47,
     type: 3}
---- !u!65 &-8717491189922122499
+--- !u!65 &8972836658028145852
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
